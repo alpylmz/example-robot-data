@@ -380,6 +380,12 @@ class FingerEduLoader(RobotLoader):
     free_flyer = False
 
 
+class IiwaLoader(RobotLoader):
+    path = "iiwa_description"
+    urdf_filename = "iiwa.urdf"
+    srdf_filename = "iiwa.srdf"
+    ref_posture = "arm_up"
+
 class KinovaLoader(RobotLoader):
     path = "kinova_description"
     urdf_filename = "kinova.urdf"
@@ -522,6 +528,7 @@ ROBOTS = {
     "anymal": ANYmalLoader,
     "anymal_c": ANYmalCLoader,
     "anymal_kinova": ANYmalKinovaLoader,
+    "iiwa": IiwaLoader,
     "asr_twodof": AsrTwoDofLoader,
     "baxter": BaxterLoader,
     "cassie": CassieLoader,
